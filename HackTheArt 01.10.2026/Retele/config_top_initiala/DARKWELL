@@ -1,0 +1,1581 @@
+DARKWELL - config facute fara ospf stuff
+pass: D0ntC0m3Her3 catre privileged
+JustG0Aw4y96 - vty
+user: hostname-ul
+
+
+PathToDARKWELL
+en
+conf t
+int gig0/0/0
+ip add 69.69.69.50 255.255.255.252
+no sh
+
+
+
+ArrivedAtDARKWELL
+en
+conf t
+hostname ArrivedAtDARKWELL
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.49 255.255.255.252
+no sh
+int gig0/0/1
+ip add 69.69.69.54 255.255.255.252
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username ArrivedAtDARKWELL secret 000
+line vty 0 15
+transport input ssh
+login local
+
+
+OhHiThere
+en
+conf t
+hostname OhHiThere
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.53 255.255.255.252
+no sh
+int se0/1/1
+ip add 69.69.69.58 255.255.255.252
+no sh
+int se0/1/0
+ip add 69.69.69.62 255.255.255.252
+no sh
+int gig0/0/1
+ip add 69.69.69.17 255.255.255.248
+no sh
+exit
+username OhHiThere secret JustG0Aw4y96
+line vty 0 15
+transport input telnet
+login local
+
+
+DARK-Router1
+en
+conf t
+hostname DARK-Router1
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int se0/1/0
+ip add 69.69.69.61 255.255.255.252
+no sh
+exit
+username DARK-Router1 secret JustG0Aw4y96
+line vty 0 15
+transport input telnet
+login local
+
+
+DARK-Router0
+en
+conf t
+hostname DARK-Router0
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int se0/1/1
+ip add 69.69.69.57 255.255.255.252
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username DARK-Router0 secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+DontGiveUp
+en
+conf t
+hostname DontGiveUp
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.18 255.255.255.248
+no sh
+exit
+username DontGiveUp secret JustG0Aw4y96
+line vty 0 15
+transport input telnet
+login local
+
+
+G-Gl1tttch%$?
+
+en
+conf t
+hostname G-Gl1tttch%$?
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.19 255.255.255.248
+no sh
+int gig0/0/1
+ip add 69.69.69.33 255.255.255.248
+no sh
+exit
+username G-Gl1tttch%$? secret JustG0Aw4y96
+line vty 0 15
+transport input telnet
+login local
+
+
+GOAWAY
+en
+conf t
+hostname GOAWAY
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.20 255.255.255.248
+no sh
+int se0/2/0
+ip add 69.69.69.82 255.255.255.252
+no sh
+int se0/2/1
+ip add 69.69.69.86 255.255.255.252
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username GOAWAY secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+
+KeepLooking
+en
+conf t
+hostname KeepLooking
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.21 255.255.255.248
+no sh
+exit
+username KeepLooking secret JustG0Aw4y96
+line vty 0 15
+transport input telnet
+login local
+
+
+
+DARK-Switch0
+en
+conf t
+hostname DARK-Switch0
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int vlan 1
+ip add 69.69.69.22 255.255.255.248
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username DARK-Switch0 secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+KeepCalm
+en
+conf t
+hostname KeepCalm
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int vlan 1
+ip add 69.69.69.34 255.255.255.248
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username KeepCalm secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+Closer1
+
+en
+conf t
+hostname Closer1
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.35 255.255.255.248
+no sh
+int gig0/0/1
+ip add 69.69.69.66 255.255.255.252
+no sh
+exit
+username Closer1 secret JustG0Aw4y96
+line vty 0 15
+transport input telnet
+login local
+
+Closer2
+en
+conf t
+hostname Closer2
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.36 255.255.255.248
+no sh
+int se0/1/0
+ip add 69.69.69.70 255.255.255.252
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username Closer2 secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+
+Closer3
+
+en
+conf t
+hostname Closer3
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.37 255.255.255.248
+no sh
+int se01/1
+ip add 69.69.69.74 255.255.255.252
+no sh
+exit
+username Closer3 secret JustG0Aw4y96
+line vty 0 15
+transport input telnet
+login local
+
+
+
+OneMore
+en
+conf t
+hostname OneMore
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.65 255.255.255.252
+no sh
+int gig0/0/1
+ip add 69.69.69.78 255.255.255.252
+no sh
+int se0/1/0
+ip add 69.69.69.69 255.255.255.252
+no sh
+int se0/1/1
+ip add 69.69.69.73 255.255.255.252
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username OneMore secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+
+NvrGonnaGiveYouUpp
+en
+conf t
+hostname NvrGonnaGiveYouUpp
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.77 255.255.255.252
+no sh
+exit
+username NvrGonnaGiveYouUpp secret JustG0Aw4y96
+line vty 0 15
+transport input telnet
+login local
+
+
+DARK-Router3
+
+en
+conf t
+hostname DARK-Router3
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int s0/2/1
+ip add 69.69.69.85 255.255.255.252
+no sh
+int gig0/0/0
+ip add 69.69.69.25 255.255.255.248
+no sh
+exit
+username DARK-Router3 secret JustG0Aw4y96
+line vty 0 15
+transport input telnet
+login local
+
+
+DARK-Switch1
+en
+conf t
+hostname DARK-Switch1
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int vlan 1
+ip add 69.69.69.26 255.255.255.248
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username DARK-Switch1 secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+
+DARK-Router4
+en
+conf t
+hostname DARK-Router4
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int se0/2/0
+ip add 69.69.69.81 255.255.255.252
+no sh
+int gig0/0/0
+ip add 69.69.69.27 255.255.255.248
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username DARK-Router4 secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+throughHERE
+
+en
+conf t
+hostname throughHERE
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int vlan 1
+ip add 69.69.69.28 255.255.255.248
+no sh
+exit
+username throughHERE secret JustG0Aw4y96
+line vty 0 15
+transport input telnet
+login local
+
+
+
+nah
+en
+conf t
+hostname nah
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.29 255.255.255.248
+no sh
+exit
+username nah secret JustG0Aw4y96
+line vty 0 15
+transport input telnet
+login local
+
+
+JustANormalRouter
+
+en
+conf t
+hostname JustANormalRouter
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.30 255.255.255.248
+no sh
+int gig0/0/1
+ip add 69.69.69.41 255.255.255.248
+no sh
+int se0/1/0
+ip add 69.69.69.90 255.255.255.252
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username JustANormalRouter secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+
+NotObviousRight
+en
+conf t
+hostname NotObviousRight
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int vlan 1
+ip add 69.69.69.42 255.255.255.248
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username NotObviousRight secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+
+JustKeepGoing
+en
+conf t
+hostname JustKeepGoing
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.43 255.255.255.248
+no sh
+int gig0/0/1
+ip add 69.69.69.94 255.255.255.252
+no sh
+exit
+username JustKeepGoing secret JustG0Aw4y96
+line vty 0 15
+transport input telnet
+login local
+
+
+SrryGang:)
+en
+conf t
+hostname SrryGang:)
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int vlan 1
+ip add 69.69.69.93 255.255.255.252
+no sh
+exit
+username SrryGang:) secret JustG0Aw4y96
+line vty 0 15
+transport input telnet
+login local
+
+
+NothingToSeeHere
+en
+conf t
+hostname NothingToSeeHere
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int se0/1/0
+ip add 69.69.69.89 255.255.255.252
+no sh
+int gig0/0/1
+ip add 69.69.69.44 255.255.255.248
+no sh
+int gig0/0/0
+ip add 69.69.69.1 255.255.255.240
+no sh
+exit
+username NothingToSeeHere secret JustG0Aw4y96
+line vty 0 15
+transport input telnet
+login local
+
+
+deadendsrry
+en
+conf t
+hostname deadendsrry
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int vlan 1
+ip add 69.69.69.2 255.255.255.240
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username deadendsrry secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+DARK-Router5
+en
+conf t
+hostname DARK-Router5
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.3 255.255.255.240
+no sh
+int gig0/0/1
+ip add 69.69.69.98 255.255.255.252
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username DARK-Router5 secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+
+DARK-Router7
+en
+conf t
+hostname DARK-Router7
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.4 255.255.255.240
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username DARK-Router7 secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+DARK-Router8
+en
+conf t
+hostname DARK-Router8
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.5 255.255.255.240
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username DARK-Router8 secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+
+StopBeingSoNaive
+en
+conf t
+hostname StopBeingSoNaive
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int vlan 1
+ip add 69.69.69.6 255.255.255.240
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username StopBeingSoNaive secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+
+
+DARK-Router9
+en
+conf t
+hostname DARK-Router9
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: "CDP and LLDP reveal what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.7 255.255.255.240
+no sh
+int gig0/0/1
+ip add 69.69.69.101 255.255.255.252
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username DARK-Router9 secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+D3f1n3tlyN0tC0r-r-rupt
+en
+conf t
+hostname D3f1n3tlyN0tC0r-r-rupt
+enable secret D0ntC0m3Her3
+banner motd #
+>>> Darkwell whispers: >>> Darkwell whispers: "CDP reveals what eyes can’t." <<<
+#
+no ip domain-l
+int gig0/0/0
+ip add 69.69.69.8 255.255.255.240
+no sh
+int gig0/0/1
+ip add 69.69.69.102 255.255.255.252
+no sh
+exit
+ip domain-name daDARKpath.local
+crypto key gen rsa 
+1024
+ip ssh ver 2
+username D3f1n3tlyN0tC0r-r-rupt secret JustG0Aw4y96
+line vty 0 15
+transport input ssh
+login local
+
+
+
+//mica schimbare la banner pe toate echipamentele : >>> DARKWELL: draw your own path through the void. <<<
+
+
+
+
+
+
+CONFIG PARTEA DE OSPF
+
+
+
+DARKWELL - config ospf
+
+
+ArrivedAtDARKWELL
+
+conf t
+router ospf 6
+router-id 6.6.6.4
+area 6 stub
+network 69.69.69.48 0.0.0.3 area 6
+network 69.69.69.52 0.0.0.3 area 6
+
+int r gig0/0/0-1
+ip ospf network point-to-point
+ip ospf hello 10
+ip ospf dead 40
+
+
+
+OhHiThere
+
+conf t
+router ospf 6
+router-id 6.6.6.5
+area 6 stub
+network 69.69.69.52 0.0.0.3 area 6
+network 69.69.69.56 0.0.0.3 area 6
+network 69.69.69.60 0.0.0.3 area 6
+network 69.69.69.16 0.0.0.7 area 6
+
+int gig0/0/0
+ip ospf network point-to-point
+ip ospf hello 10
+ip ospf dead 40
+int gig0/0/1
+ip ospf hello 10
+ip ospf dead 40
+int se0/1/0
+ip ospf network point-to-point
+ip ospf hello 6
+ip ospf dead 20
+int se0/1/1
+ip ospf network point-to-point
+ip ospf hello 6
+ip ospf dead 20
+
+
+
+DARK-Router0
+conf t
+router ospf 6
+router-id 6.6.6.6
+area 6 stub
+network 69.69.69.56 0.0.0.3 area 6
+
+int se0/1/1
+ip ospf network point-to-point
+ip ospf hello 6
+ip ospf dead 20
+
+
+DARK-Router1
+conf t
+router ospf 6
+router-id 6.6.6.7
+area 6 stub
+network 69.69.69.60 0.0.0.3 area 6
+
+int se0/1/0
+ip ospf network point-to-point
+ip ospf hello 6
+ip ospf dead 20
+
+
+
+KeepLooking
+conf t
+router ospf 6
+router-id 6.6.6.8
+area 6 stub
+network 69.69.69.16 0.0.0.7 area 6
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+
+
+GOAWAY
+conf t
+router ospf 6
+router-id 6.6.6.9
+area 6 stub
+network 69.69.69.16 0.0.0.7 area 6
+network 69.69.69.80 0.0.0.3 area 6
+network 69.69.69.84 0.0.0.3 area 6
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+int se0/2/1
+ip ospf netw point
+ip ospf hello 6
+ip ospf dead 20
+
+int se0/2/0
+ip ospf netw point
+ip ospf hello 6
+ip ospf dead 20
+
+
+
+
+G-Gl1tttch%$
+conf t
+router ospf 6
+router-id 6.6.6.10
+area 6 stub
+network 69.69.69.16 0.0.0.7 area 6
+network 69.69.69.32 0.0.0.7 area 6
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+int gig0/0/1
+ip ospf hello 10
+ip ospf dead 40
+
+
+
+DontGiveUp
+conf t
+router ospf 6
+router-id 6.6.6.11
+area 6 stub
+network 69.69.69.16 0.0.0.7 area 6
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+
+
+Closer1
+conf t
+router ospf 6
+router-id 6.6.6.12
+area 6 stub
+network 69.69.69.32 0.0.0.7 area 6
+network 69.69.69.64 0.0.0.3 area 6
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+int gig0/0/1
+ip ospf netw point 
+ip ospf hello 10
+ip ospf dead 40
+
+
+
+
+
+Closer2
+conf t
+router ospf 6
+router-id 6.6.6.13
+area 6 stub
+network 69.69.69.32 0.0.0.7 area 6
+network 69.69.69.68 0.0.0.3 area 6
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+int se0/1/0
+ip ospf netw point 
+ip ospf hello 6
+ip ospf dead 20
+
+
+
+Closer3
+conf t
+router ospf 6
+router-id 6.6.6.14
+area 6 stub
+network 69.69.69.32 0.0.0.7 area 6
+network 69.69.69.72 0.0.0.3 area 6
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+int se0/1/1
+ip ospf netw point 
+ip ospf hello 6
+ip ospf dead 20
+
+
+
+
+OneMore
+conf t
+router ospf 6
+router-id 6.6.6.15
+area 6 stub
+network 69.69.69.64 0.0.0.3 area 6
+network 69.69.69.68 0.0.0.3 area 6
+network 69.69.69.72 0.0.0.3 area 6
+network 69.69.69.76 0.0.0.3 area 6
+
+int gig0/0/0
+ip ospf netw point
+ip ospf hello 10
+ip ospf dead 40
+
+int gig0/0/1
+ip ospf netw point
+ip ospf hello 10
+ip ospf dead 40
+
+int se0/1/1
+ip ospf netw point 
+ip ospf hello 6
+ip ospf dead 20
+
+int se0/1/0
+ip ospf netw point 
+ip ospf hello 6
+ip ospf dead 20
+
+
+
+
+
+NvrGonnaGiveYouUpp
+conf t
+router ospf 6
+router-id 6.6.6.16
+area 6 stub
+network 69.69.69.76 0.0.0.3 area 6
+
+int gig0/0/0
+ip ospf netw point
+ip ospf hello 10
+ip ospf dead 40
+
+
+
+
+
+DARK-Router3
+conf t
+router ospf 6
+router-id 6.6.6.17
+area 6 stub
+network 69.69.69.24 0.0.0.7 area 6
+network 69.69.69.84 0.0.0.3 area 6
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+int se0/2/1
+ip ospf netw point
+ip ospf hello 6
+ip ospf dead 20
+
+
+
+DARK-Router4
+conf t
+router ospf 6
+router-id 6.6.6.18
+area 6 stub
+network 69.69.69.24 0.0.0.7 area 6
+network 69.69.69.80 0.0.0.3 area 6
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+int se0/2/0
+ip ospf netw point
+ip ospf hello 6
+ip ospf dead 20
+
+
+
+JustANormalRouter
+conf t
+router ospf 6
+router-id 6.6.6.19
+area 6 stub
+network 69.69.69.24 0.0.0.7 area 6
+network 69.69.69.40 0.0.0.7 area 6
+network 69.69.69.88 0.0.0.3 area 6
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+int gig0/0/1
+ip ospf hello 10
+ip ospf dead 40
+
+int se0/1/0
+ip ospf netw point
+ip ospf hello 6
+ip ospf dead 20
+
+
+
+
+nah
+conf t
+router ospf 6
+router-id 6.6.6.20
+area 6 stub
+network 69.69.69.24 0.0.0.7 area 6
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+
+JustKeepGoing
+
+conf t
+router ospf 6
+router-id 6.6.6.21
+area 6 stub
+network 69.69.69.40 0.0.0.7 area 6
+network 69.69.69.92 0.0.0.3 area 6
+
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+int gig0/0/1
+ip ospf hello 10
+ip ospf dead 40
+
+
+
+NothingToSeeHere
+conf t
+router ospf 6
+router-id 6.6.6.22
+area 6 stub
+network 69.69.69.0 0.0.0.15 area 6
+network 69.69.69.40 0.0.0.7 area 6
+network 69.69.69.88 0.0.0.3 area 6
+
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+int gig0/0/1
+ip ospf hello 10
+ip ospf dead 40
+
+int se0/1/0
+ip ospf netw point
+ip ospf hello 6
+ip ospf dead 20
+
+
+
+
+DARK-Router5
+conf t
+router ospf 6
+router-id 6.6.6.23
+area 6 stub
+network 69.69.69.0 0.0.0.15 area 6
+network 69.69.69.96 0.0.0.3 area 6
+
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+int gig0/0/1
+ip ospf hello 10
+ip ospf dead 40
+
+
+
+DARK-Router7
+conf t
+router ospf 6
+router-id 6.6.6.24
+area 6 stub
+network 69.69.69.0 0.0.0.15 area 6
+
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+
+
+DARK-Router8
+conf t
+router ospf 6
+router-id 6.6.6.25
+area 6 stub
+network 69.69.69.0 0.0.0.15 area 6
+
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+
+
+DARK-Router9
+conf t
+router ospf 6
+router-id 6.6.6.26
+area 6 stub
+network 69.69.69.0 0.0.0.15 area 6
+network 69.69.69.100 0.0.0.3 area 6
+
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+int gig0/0/1
+ip ospf netw point
+ip ospf hello 10
+ip ospf dead 40
+
+
+
+
+
+D3f1n3tlyN0tC0r-r-rupt
+conf t
+router ospf 6
+router-id 255.255.255.255
+area 6 stub
+network 69.69.69.0 0.0.0.15 area 6
+network 69.69.69.100 0.0.0.3 area 6
+
+int gig0/0/0
+ip ospf hello 10
+ip ospf dead 40
+int gig0/0/1
+ip ospf netw point
+ip ospf hello 10
+ip ospf dead 40
+
+
+
+nothingtoseehere
+clear ip ospf proc
+yes
+conf t
+router ospf 6
+router-id 9.6.6.22 
+int gig0/0/0
+ip ospf priority 66
+
+
+dark router 7
+clear ip ospf proc
+yes
+conf t
+router ospf 6
+router-id 6.6.6.24
+int gig0/0/0
+ip ospf priority 69
+
+
+
+
+dark router 8
+clear ip ospf proc
+yes
+conf t
+router ospf 6
+router-id 6.6.9.25
+int gig0/0/0
+ip ospf priority 0
+
+
+
+dark router 9
+clear ip ospf proc
+yes
+conf t
+router ospf 6
+router-id 69.6.6.26
+int gig0/0/0
+ip ospf priority 65
+
+
+
+dark router 5
+clear ip ospf proc
+yes
+conf t
+router ospf 6
+router-id 9.9.6.23
+int gig0/0/0
+ip ospf priority 63
+
+
+
+
+
+dark - router 5
+ip route 0.0.0.0 0.0.0.0 69.69.69.8
+router ospf 6
+default-information originate 
+
+
+
+
+
+DARKWELL
+- am scos ssh de pe Defnotcorrupt
+
+
+
+schimbari darkwell (ospf timers si parole)
+
+ArrivedAtDARKWELL
+en
+conf t
+no username ArrivedAtDARKWELL password JustG0Aw4y96
+username ArrivedAtDARKWELL password 000
+int gig0/0/0
+ip ospf hello 15
+ip ospf dead 45
+do wr
+
+OhHiThere
+en
+conf t
+no username OhHiThere password JustG0Aw4y96
+username OhHiThere password 000
+do wr
+
+DARK-Router1
+en
+conf t
+no username DARK-Router1 password JustG0Aw4y96
+username DARK-Router1 password 000
+do wr
+
+
+DARK-Router0
+en
+conf t
+no username DARK-Router0 password JustG0Aw4y96
+username DARK-Router0 password 000
+do wr
+
+
+KeepLooking
+en
+conf t
+no username KeepLooking password JustG0Aw4y96
+username KeepLooking password 000
+do wr
+
+
+DontGiveUp
+en
+conf t
+no username DontGiveUp password JustG0Aw4y96
+username DontGiveUp password 000
+do wr
+
+
+GOAWAY
+en
+conf t
+no username GOAWAY password JustG0Aw4y96
+username GOAWAY password 000
+do wr
+
+
+G-Gl1tttch%$
+en
+conf t
+no username G-Gl1tttch%$ password JustG0Aw4y96
+username G-Gl1tttch%$ password 000
+do wr
+
+
+Closer1
+en
+conf t
+no username Closer1 password JustG0Aw4y96
+username Closer1 password 000
+do wr
+
+
+Closer2
+en
+conf t
+no username Closer2 password JustG0Aw4y96
+username Closer2 password 000
+do wr
+
+
+
+Closer3
+en
+conf t
+no username Closer3 password JustG0Aw4y96
+username Closer3 password 000
+do wr
+
+OneMore
+
+en
+conf t
+no username OneMore password JustG0Aw4y96
+username OneMore password 000
+do wr
+
+
+NvrGonnaGiveYouUpp
+
+en
+conf t
+no username NvrGonnaGiveYouUpp password JustG0Aw4y96
+username NvrGonnaGiveYouUpp password 000
+do wr
+
+
+DARK-Router3
+en
+conf t
+no username DARK-Router3 password JustG0Aw4y96
+username DARK-Router3 password 000
+do wr
+
+
+DARK-Router4
+en
+conf t
+no username DARK-Router4 password JustG0Aw4y96
+username DARK-Router4 password 000
+do wr
+
+
+
+DARK-Switch0
+en
+conf t
+no username DARK-Switch0 password JustG0Aw4y96
+username DARK-Switch0 password 000
+do wr
+
+
+DARK-Switch1
+en
+conf t
+no username DARK-Switch1 password JustG0Aw4y96
+username DARK-Switch1 password 000
+do wr
+
+
+JustANormalRouter
+en
+conf t
+no username JustANormalRouter password JustG0Aw4y96
+username JustANormalRouter password 000
+do wr
+
+
+nah
+en
+conf t
+no username nah password JustG0Aw4y96
+username nah password 000
+do wr
+
+
+throughHERE
+en
+conf t
+no username throughHERE password JustG0Aw4y96
+username throughHERE password 000
+do wr
+
+
+JustKeepGoing
+en
+conf t
+no username JustKeepGoing password JustG0Aw4y96
+username JustKeepGoing password 000
+do wr
+
+NotObviousRight
+en
+conf t
+no username NotObviousRight password JustG0Aw4y96
+username NotObviousRight password 000
+do wr
+
+
+SrryGang:)
+en
+conf t
+no username SrryGang:) password JustG0Aw4y96
+username SrryGang:) password 000
+do wr
+
+
+NothingToSeeHere
+en
+conf t
+no username NothingToSeeHere password JustG0Aw4y96
+username NothingToSeeHere password 000
+do wr
+
+
+
+deadendsrry
+en
+conf t
+no username deadendsrry password JustG0Aw4y96
+username deadendsrry password 000
+do wr
+
+
+
+DARK-Router5
+en
+conf t
+no username DARK-Router5 password JustG0Aw4y96
+username DARK-Router5 password 000
+do wr
+
+
+DARK-Router7
+en
+conf t
+no username DARK-Router7 password JustG0Aw4y96
+username DARK-Router7 password 000
+do wr
+
+
+
+DARK-Router8
+en
+conf t
+no username DARK-Router8 password JustG0Aw4y96
+username DARK-Router8 password 000
+do wr
+
+
+
+
+
+DARK-Router9
+en
+conf t
+no username DARK-Router9 password JustG0Aw4y96
+username DARK-Router9 password 000
+do wr
+
+
+D3f1n3tlyN0tC0r-r-rupt
+en
+conf t
+no username D3f1n3tlyN0tC0r-r-rupt password JustG0Aw4y96
+username D3f1n3tlyN0tC0r-r-rupt password 000
+do wr
+
+
+StopBeingSoNaive
+en
+conf t
+no username StopBeingSoNaive password JustG0Aw4y96
+username StopBeingSoNaive password 000
+do wr

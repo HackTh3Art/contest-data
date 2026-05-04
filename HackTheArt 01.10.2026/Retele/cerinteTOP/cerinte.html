@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<style>
+    h4, h3, h2, p, li {
+    	font-family: Helvetica, Arial, sans-serif;
+    }
+    h2 {
+    	color: #4a2480;
+    }
+    h3 {
+    	color: #80245a;
+  }
+</style>
+
+<h2>HackTheART 1.0</h2>
+
+<h3>Story-line: Operation AI Rise</h3>
+
+<p><b>In a world where the Internet has been erased by the Virex —autonomous AI sentinels designed to eliminate all networks— you were captured while working with the last colonies. Instead of destroying you, the Virex forced you inside their core infrastructure. Your task is to configure and secure their network as fast as possible before the final synchronization completes. You have two hours. If the system is misconfigured or incomplete, they will eliminate you.</b></p>
+
+<h3>SUBIECTUL 1 – Adresare IPv6</h3>
+
+<p>În zona <strong>VIREXCORE</strong>, echipamentele vor lua adresele IPv6 în ordinea crescătoare a indexului lor:</p>
+
+<ul>
+  <li><strong>Între VIREXCORE_0 și VIREXCORE_1:</strong> <code>dead:beef:6::/64</code> cu spațiul <code>fe80::</code> link-local.</li>
+  <li><strong>Între VIREXCORE_0 și VIREXCORE_2:</strong> <code>dead:beef:66::/64</code> cu spațiul <code>fe80::</code> link-local.</li>
+  <li><strong>Între VIREXCORE_1 și VIREXCORE_2:</strong> <code>dead:beef:666::/64</code> cu spațiul <code>fe80::</code> link-local.</li>
+  <li><strong>Între VIREXCORE_0, VIREXCORE_1, VIREXCORE_2 și Ghinionul0:</strong> <code>dead:beef:6666::/64</code> cu spațiul <code>fe80::</code> link-local, iar ordinea adreselor este cea în care au fost enumerate echipamentele.</li>
+</ul>
+
+<p>Rețeaua dintre <strong>VIREXCORE_0</strong> și <strong>Slobocity2.0</strong>: <code>c0de:1337:5::/64</code> cu spațiul <code>fe80::</code> link-local; prima adresă este luată de VIREXCORE_0.</p>
+
+<p>Rețeaua dintre <strong>VIREXCORE_1</strong> și <strong>SistemulVIREX</strong>: <code>c0ff:ee:bad2:e24::/64</code> cu spațiul <code>fe80::</code> link-local; prima adresă este luată de VIREXCORE_1.</p>
+
+<p>Rețeaua către <strong>internet</strong>: <code>c0ca:c01a:101::/64</code> cu spațiul <code>fe80::</code> link-local; prima adresă este luată de VIREXCORE_2.</p>
+
+<h4>Cluster-ul:</h4>
+
+<ul>
+  <li><strong>MYSTERION</strong> – spațiul de adrese: <code>510b:b4be:221F::/64</code>
+    <ul>
+      <li><strong>Slobocity2.0</strong>: prima adresă + spațiul link-local <code>fe80::</code></li>
+    </ul>
+  </li>
+  <li><strong>N-AI_TUPEU_REGE</strong> – spațiul de adrese: <code>bad:1dea:ff96::/64</code>
+    <ul>
+      <li><strong>SistemulVIREX</strong>: prima adresă + spațiul link-local <code>fe80::</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p><b>Atenție!</b> Prima adresă a unui subnet, în IPv6, nu se află în același mod ca în cazul IPv4. Numerotarea adreselor va începe de la 0, nu de la 1!</p>
+
+
+
+<h3>SUBIECTUL 2 – Dynamic Host Configuration Protocol IPv6 (DHCPv6)</h3>
+
+<p>În cluster-ul <strong>MYSTERION</strong>, serverul de <strong>DHCPv6 stateless</strong> va fi configurat pe router-ul <strong>Slobocity2.0</strong>. Pool-ul IPv6 se va numi <strong>Stateless_IPv6FaraNumar</strong>, numele domeniului va fi <strong>regeee.local</strong>, iar adresa serverului de DNS <strong>510b:b4be:221F::66/64</strong>.</p>
+
+<p>În cluster-ul <strong>N-AI_TUPEU_REGE</strong>, serverul de <strong>DHCPv6 stateful</strong> va fi configurat pe router-ul <strong>SistemulVIREX</strong>. Pool-ul IPv6 se va numi <strong>Stateful_IPv6FaraNumar</strong>, numele domeniului va fi <strong>grrPOW.local</strong>, iar adresa serverului de DNS <strong>bad:1dea:ff96::66/64</strong>.</p>
+
+<p>Clienții din rețea vor primi adrese IPv6 automat(faceți configurațiile necesare astfel încat și clienții wireless să primească adresare IPv6), conform tipului serverului configurat (stateful/stateless).</p>
+
+
+
+
+<h3>SUBIECTUL 3 – Tunelare IPv6</h3>
+
+<p>În cluster-ul <strong>hai_la_J*B</strong>, veți configura <strong>tunelare IPv6</strong>. În rețea sunt deja configurate adresele <strong>IPv4</strong> dintre routere și cele <strong>IPv6</strong> din LAN-uri.</p>
+
+<p>Configurați câte o <strong>rută statică</strong> atât pe <strong>Ghinionul0</strong> către rețeaua <strong>2.6.2.4/30</strong>, cât și pe <strong>Ghinionul2</strong> către <strong>2.6.2.0/30</strong>, astfel încât să existe conectivitate între ele.</p>
+
+<p>Se va crea <strong>interfața tunnel0</strong> între <strong>Ghinionul0</strong> și <strong>Ghinionul2</strong> cu adresele:</p>
+<ul>
+  <li><strong>Ghinionul0:</strong> 2001:db8:666::1/64</li>
+  <li><strong>Ghinionul2:</strong> 2001:db8:666::2/64</li>
+</ul>
+
+<p>Nu uitați să configurați <strong>sursa</strong>, <strong>destinația</strong>, cât și <strong>modul</strong> tunelului.</p>
+
+<h3>SUBIECTUL 4 – Open Shortest Path First IPv6 (OSPFv3)</h3>
+
+<p>Un ultim task dat de <strong>VIREX</strong> este să asigurați conectivitatea între toate cluster-ele de pe navă folosind <strong>OSPFv3</strong>.</p>
+
+<p>Procesul OSPF va avea numărul <strong>2</strong>, iar activarea rețelelor se va face pe fiecare interfață în parte. Veți configura următoarele router IDs:</p>
+
+<ul>
+  <li><strong>VIREXCORE_0:</strong> 100.0.0.0</li>
+  <li><strong>Slobocity2.0:</strong> 100.0.0.1</li>
+  <li><strong>VIREXCORE_1:</strong> 101.0.0.0</li>
+  <li><strong>SistemulVIREX:</strong> 101.0.0.1</li>
+  <li><strong>VIREXCORE_2:</strong> 102.0.0.0</li>
+  <li><strong>Ghinionul0:</strong> 103.0.0.0</li>
+  <li><strong>Ghinionul2:</strong> 103.0.0.1</li>
+</ul>
+
+<p>Pe legăturile seriale, cât și pe cea a tunelului, se va <strong>dezactiva alegerea DR-ului și a BDR-ului</strong>.</p>
+
+<p>Pe router-ul <strong>VIREXCORE_2</strong> veți adăuga o <strong>rută default către Internet</strong> cu next hop-ul: <code>c0ca:c01a:101::2/64</code> și o veți propaga în procesul OSPF.</p>
+
+<p><b>ATENȚIE!</b> În cluster-ul <b>hai_la_J*B</b>, OSPF-ul va fi activat atât pe interfața <b>tunelului</b>, cât și pe cea către LAN-uri.</p>
+
+<h3>SUBIECTUL 5 – DARKWELL(în al doilea PKA)</h3>
+
+<p>După ce v-ați întors din nava VIREX, a fost descoperit un cluster al coloniilor rebele, <strong>DARKWELL</strong>, la care un utilizator obișnuit nu are acces, nu a fost configurată autentificarea MD5, iar un router corupt de <strong>VIREX</strong> a reușit să câștige alegerea DR-ului.</p>
+
+<p>Se va traversa cluster-ul folosindu-se <strong>SSH/Telnet</strong> pentru conectarea de la distanță la echipamentele de rețea, iar <strong>CDP</strong> va fi utilizat pentru a descoperi device-urile aflate în apropiere.</p>
+
+<ul>
+  <li>Parola către Privileged EXEC: <code>D0ntC0m3Her3</code></li>
+  <li>Parola pe liniile VTY: <code>000</code></li>
+  <li>Username-ul folosit pentru autentificarea SSH/Telnet va fi hostname-ul echipamentului</li>
+</ul>
+
+<p>În rețeaua multiaccess, în care <strong>D3f1n3tlyN0tC0r-r-rupt</strong> este DR, se vor naviga toate router-ele pentru a determina care ar trebui să fie DR-ul după modificările echipei. Pe router-ul potrivit se va seta <strong>prioritatea maximă</strong> pentru ca la următoarea alegere acesta să devină noul DR.</p>
+
+<p>În continuare, se va șterge <strong>ruta default</strong> adăugată de un utilizator corupt de <strong>VIREX</strong>. La final, se va închide <strong>link-ul către router-ul corupt</strong>.</p>
+
+<p><strong>OBSERVAȚIE!</strong> Comenzile de pe router-ul care are ruta default vor fi verificate manual</strong></p>
+
+<p><b>ATENȚIE!</b> Acest subiect a fost lăsat la final deoarece consumă foarte mult timp. În cazul în care nu reușiți să-l rezolvați, nu vă descurajați și continuați să căutați router-ul – vă recomand să faceți o hartă a cluster-ului de la început pentru a nu vă încurca. <b>MULT NOROC!</b></p>
+
+</body>
+</html>

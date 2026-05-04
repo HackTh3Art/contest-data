@@ -1,0 +1,236 @@
+OBSIDIA2.1
+
+
+ArrivedAtOBSIDIA
+en
+conf t
+int gig0/0/1
+no sh
+duplex full
+speed 100
+int gig0/0/1.36
+en d 36
+ip add 193.167.5.94 255.255.255.224
+int gig0/0/1.63
+en d 63
+ip add 193.167.5.62 255.255.255.192
+
+
+OBS-SW2
+en
+conf t
+vl 36
+name CYREX
+vl 63
+name STOCK
+vl 99
+name NATIVEVLAN
+exit
+int r fa0/3-4
+sw mo tr
+sw tr al vl 36, 63
+sw tr native vl 99
+duplex full
+speed 100
+int r fa0/1-2
+sw mo ac
+duplex half 
+speed 10
+int fa0/1
+sw ac vl 63
+int fa0/2
+sw ac vl 36
+int r fa0/5-24
+duplex half 
+speed 10
+int r gig0/1-2
+speed 10
+
+
+
+
+CONFIGURATII GRESITE/CORECTE INITIALE IN OBSIDIA
+
+OBS-SW0
+en
+conf t
+vl 36
+name STOCK
+vl 63 
+name CYREX
+vl 99
+name NATIVEVLAN
+exit
+int r fa0/1-3
+sw tr native vl 36
+sw tr al vl 36,63
+speed 10
+duplex half
+int r fa0/4-24
+duplex half
+speed 10
+int r  gig0/1-2
+speed 100
+
+
+OBS-SW1
+en
+conf t
+vl 99
+name NATIVEVLAN
+exit
+int r fa0/3
+sw acc vl 36
+sw tr native vl 36
+speed 100
+duplex half
+int r fa0/1-2
+speed 10
+sw mo ac
+sw ac vl 36
+int r fa0/4-24
+duplex half
+speed 10
+int r  gig0/1-2
+speed 100
+no vl 36
+no vl 63
+
+
+
+OBS-SW3
+en
+conf t
+vl 36
+name CYREX
+vl 63
+name STOCK
+vl 99
+name NATIVEVLAN
+exit
+int r fa0/1-4
+sw mo tr
+sw tr al vl 36,63
+speed 100
+duplex full
+int fa0/5
+duplex full
+speed 100
+sw mo ac
+sw ac vl 36
+int r fa0/6-21
+duplex half
+speed 10
+int r fa0/22-24
+speed 100
+int r  gig0/1-2
+speed 100
+
+
+
+
+OBS-MSW0
+en
+conf t
+vl 36
+name CYREX
+vl 63
+name STOCK
+vl 99
+name NATIVEVLAN
+exit
+int r fa0/1-3
+no sw
+duplex full
+speed 100
+int r  fa0/4-24
+duplex half
+speed 10
+int r gig0/1-2
+speed 100
+
+
+OBS-MSW1
+en
+conf t
+vl 36
+name CYREX
+vl 63
+name STOCK
+vl 99
+name NATIVEVLAN
+exit
+int r fa0/1-3
+no sw
+duplex full
+speed 100
+int r  fa0/4-24
+duplex half
+speed 10
+int r gig0/1-2
+speed 100
+
+
+OBS-MSW2
+en
+conf t
+vl 36
+name CYREX
+vl 63
+name STOCK
+vl 99
+name NATIVEVLAN
+exit
+int fa0/1
+sw
+sw tr en do
+sw mo tr
+sw tr al vl 36,63
+sw tr native vl 99
+duplex full
+speed 100
+int r fa0/2-3
+no sw
+duplex full
+speed 100
+int r  fa0/4-24
+duplex half
+speed 10
+int r gig0/1-2
+speed 100
+
+
+
+OBS-SW4
+en
+conf t
+vl 99
+name NATIVEVLAN
+exit
+int fa0/1
+sw mo tr
+sw tr al vl 36,63
+sw tr nat vl 99s
+speed 100
+duplex full
+int fa0/2
+sw mo ac
+sw ac vl 63
+speed 10
+duplex half
+int fa0/3
+sw mo ac
+sw ac vl 36
+speed 10
+duplex half
+int r  fa0/4-24
+duplex half
+speed 10
+int r gig0/1-2
+speed 10
+no vl 36
+no vl 63
+
+
+
+

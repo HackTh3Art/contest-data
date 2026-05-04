@@ -1,0 +1,2736 @@
+Barem_v2_PerSubiect
+
+
+
+-------------------------SUBIECTUL 1----------------------------
+
+
+ArrivedAtLYXIS
+en
+conf t
+hostname ArrivedAtLYXIS
+banner motd "YOU ARE NOT SUPPOSED TO BE HERE... but neither are we.."
+enable password NeverCATCHme
+no ip domain-l
+service pass
+
+
+
+LYX-MSW0
+en
+conf t
+hostname LYX-MSW0
+banner motd "YOU ARE NOT SUPPOSED TO BE HERE... but neither are we.."
+enable password NeverCATCHme
+no ip domain-l
+service pass
+
+
+
+
+LYX-MSW1
+en
+conf t
+hostname LYX-MSW1
+banner motd "YOU ARE NOT SUPPOSED TO BE HERE... but neither are we.."
+enable password NeverCATCHme
+no ip domain-l
+service pass
+
+
+
+
+
+LYX-MSW2
+en
+conf t
+hostname LYX-MSW2
+banner motd "YOU ARE NOT SUPPOSED TO BE HERE... but neither are we.."
+enable password NeverCATCHme
+no ip domain-l
+service pass
+
+
+
+
+
+LYX-MSW3
+en
+conf t
+hostname LYX-MSW3
+banner motd "YOU ARE NOT SUPPOSED TO BE HERE... but neither are we.."
+enable password NeverCATCHme
+no ip domain-l
+service pass
+
+
+
+
+LYX-MSW4
+en
+conf t
+hostname LYX-MSW4
+banner motd "YOU ARE NOT SUPPOSED TO BE HERE... but neither are we.."
+enable password NeverCATCHme
+no ip domain-l
+service pass
+
+
+LYX-SW0
+en
+conf t
+hostname LYX-SW0
+banner motd "YOU ARE NOT SUPPOSED TO BE HERE... but neither are we.."
+enable password NeverCATCHme
+no ip domain-l
+service pass
+
+
+LYX-SW1
+en
+conf t
+hostname LYX-SW1
+banner motd "YOU ARE NOT SUPPOSED TO BE HERE... but neither are we.."
+enable password NeverCATCHme
+no ip domain-l
+service pass
+
+
+
+
+
+-------------------------SUBIECTUL 2----------------------------
+
+
+Am pus adresele ip pe end devices din SOLARA + cele din SKYLON
+
+
+SKYLON
+
+SKY-Router0
+en
+conf t
+int gig0/0/0
+ip add 101.36.225.161 255.255.255.248
+no sh
+int gig0/0/1
+ip add 101.36.225.1 255.255.255.192
+do wr
+no sh
+
+
+SKY-Router1
+en
+conf t
+int gig0/0/0
+ip add 101.36.225.162 255.255.255.248
+no sh
+int gig0/0/1
+ip add 101.36.225.2 255.255.255.192
+do wr
+no sh
+
+
+SKY-Router2
+en
+conf t
+int gig0/0/0
+ip add 101.36.225.163 255.255.255.248
+no sh
+int gig0/0/1
+ip add 101.36.225.3 255.255.255.192
+do wr
+no sh
+
+
+
+ArrivedAtSKYLON
+en
+conf t
+int gig0/0/0
+ip add 101.36.226.2 255.255.255.252
+no sh
+int gig0/0/1
+ip add 101.36.225.164 255.255.255.248
+do wr
+no sh
+
+
+Pe SKY-HomeRouter0 am pus adresa pe interfata WAN dev 101.36.225.4/26 iar pe LAN
+
+
+
+ZONA HEX CORE
+
+
+HEXCoreRouter_1
+en
+conf t
+int se0/1/0
+ip add 101.36.225.222 255.255.255.252
+no sh
+int se0/1/1
+ip add 101.36.225.205 255.255.255.252
+no sh
+int gig0/0/0
+ip add 101.36.225.185 255.255.255.252
+no sh
+int gig0/0/1
+ip add 101.36.225.177 255.255.255.248
+do wr
+no sh
+
+
+HEXCoreRouter_2
+en
+conf t
+int se0/1/0
+ip add 101.36.225.230 255.255.255.252
+no sh
+int se0/1/1
+ip add 101.36.225.189 255.255.255.252
+no sh
+int gig0/0/0
+ip add 101.36.225.186 255.255.255.252
+no sh
+int gig0/0/1
+ip add 101.36.225.178 255.255.255.248
+no sh
+int se0/2/1
+ip add 101.36.225.209 255.255.255.252
+do wr
+no sh
+
+
+HEXCoreRouter_5
+en
+conf t
+int se0/1/0
+ip add 101.36.225.254 255.255.255.252
+no sh
+int se0/1/1
+ip add 101.36.225.190 255.255.255.252
+no sh
+int gig0/0/0
+ip add 101.36.225.193 255.255.255.252
+no sh
+int se0/2/0
+ip add 101.36.225.218 255.255.255.252
+no sh
+int se0/2/1
+ip add 101.36.225.214 255.255.255.252
+do wr
+no sh
+
+
+HEXCoreRouter_6
+en
+conf t
+int se0/1/0
+ip add 101.36.226.6 255.255.255.252
+no sh
+int se0/1/1
+ip add 101.36.225.198 255.255.255.252
+no sh
+int gig0/0/0
+ip add 101.36.225.194 255.255.255.252
+no sh
+int gig0/0/1
+ip add 101.36.225.179 255.255.255.248
+do wr
+no sh
+
+
+HEXCoreRouter_4
+en
+conf t
+int se0/1/0
+ip add 101.36.225.246 255.255.255.252
+no sh
+int se0/2/0
+ip add 101.36.225.217 255.255.255.252
+no sh
+int gig0/0/0
+ip add 101.36.225.202 255.255.255.252
+no sh
+int se0/1/1
+ip add 101.36.225.197 255.255.255.252
+no sh
+int se0/2/1
+ip add 101.36.225.210 255.255.255.252
+do wr
+no sh
+
+HEXCoreRouter_3
+en
+conf t
+int se0/1/1
+ip add 101.36.225.206 255.255.255.252
+no sh
+int se0/1/0
+ip add 101.36.225.238 255.255.255.252
+no sh
+int gig0/0/0
+ip add 101.36.225.201 255.255.255.252
+no sh
+int se0/2/1
+ip add 101.36.225.213 255.255.255.252
+do wr
+no sh
+
+
+
+PathToSOLARA
+en
+conf t
+int gig0/0/0
+ip add 101.36.225.225 255.255.255.252
+no sh
+int se0/1/0
+ip add 101.36.225.221 255.255.255.252
+do wr
+no sh
+
+ArrivedAtSOLARA
+en
+conf t
+int gig0/0/0
+ip add 101.36.225.226 255.255.255.252
+do wr
+no sh
+
+
+
+
+PathToLYXIS
+en
+conf t
+int gig0/0/0
+ip add 101.36.225.233 255.255.255.252
+no sh
+int se0/1/0
+ip add 101.36.225.229 255.255.255.252
+do wr
+no sh
+
+ArrivedAtLYXIS
+en
+conf t
+ip routing
+int fa0/1
+no sw
+ip add 101.36.225.234 255.255.255.252
+do wr
+no sh
+
+
+
+PathToSKYLON
+en
+conf t
+int gig0/0/0
+ip add 101.36.226.1 255.255.255.252
+no sh
+int se0/1/0
+ip add 101.36.225.253 255.255.255.252
+do wr
+no sh
+
+ArrivedAtSKYLON
+en
+conf t
+int gig0/0/0
+ip add 101.36.226.2 255.255.255.252
+no sh
+int gig0/0/1
+ip add 101.36.225.164 255.255.255.248
+do wr
+no sh
+
+
+PathToDARKWELL
+en
+conf t
+int se0/1/0
+ip add 101.36.226.5 255.255.255.252
+do wr
+no sh
+
+
+
+PathToNIXUS
+en
+conf t
+int gig0/0/0
+ip add 101.36.225.249 255.255.255.252
+no sh
+int se0/1/0
+ip add 101.36.225.245 255.255.255.252
+do wr
+no sh
+
+
+
+PathToOBSIDIA
+en
+conf t
+int gig0/0/0
+ip add 101.36.225.241 255.255.255.252
+no sh
+int se0/1/0
+ip add 101.36.225.237 255.255.255.252
+do wr
+no sh
+
+ArrivedAtOBSIDIA
+en
+conf t
+int gig0/0/0
+ip add 101.36.225.242 255.255.255.252
+do wr
+no sh
+
+
+
+
+-------------------------SUBIECTUL 3----------------------------
+
+
+
+
+ArrivedAtSOLARA
+
+en
+conf t
+int gig0/0/1
+no sh
+int gig0/0/1.2
+en d 2
+ip add 101.36.221.254 255.255.254.0
+int gig0/0/1.4
+en d 4
+ip add 101.36.223.254 255.255.255.0
+int gig0/0/1.6
+en d 6
+ip add 101.36.219.254 255.255.252.0
+int gig0/0/1.8
+en d 8
+ip add 101.36.225.158 255.255.255.224
+do wr
+
+
+
+LYXIS
+
+ArrivedAtLYXIS
+en
+conf t
+int vl 11
+ip add 101.36.225.126 255.255.255.192
+int vl 22
+ip add 101.36.222.254 255.255.255.0
+int vl 33
+ip add 101.36.224.254 255.255.255.128
+int vl 44
+ip ad 101.36.225.174 255.255.255.248
+
+
+------------------------SUBIECTUL 4----------------------------
+
+LYXIS
+
+
+ArrivedAtLYXIS
+int r fa0/3-5
+channel-group 1 mode passive
+do wr
+
+LYX-MSW0
+int r fa0/3-5
+channel-group 1 mode active
+int r fa0/6-7
+channel-group 2 mode desirable
+do wr
+
+LYX-SW0
+int r fa0/6-7
+channel-group 2 mode auto
+int r fa0/1-3
+channel-group 1 mode passive
+int r fa0/4-5
+channel-group 3 mode auto
+do wr
+
+
+LYX-SW1
+int r fa0/1-3
+channel-group 1 mode active
+do wr
+
+LYX-MSW1
+int r fa0/4-5
+channel-group 3 mode desirable
+int r fa0/6-7
+channel-group 2 mode auto
+int fa0/2
+channel-group 1 mode passive
+int fa0/8
+channel-group 1 mode passive
+do wr
+
+
+LYX-MSW2
+int fa0/2
+channel-group 1 mode active
+int fa0/8
+channel-group 1 mode active
+do wr
+
+
+LYX-MSW3
+int r fa0/6-7
+channel-group 2 mode desirable
+do wr
+
+
+
+
+
+
+ArrivedAtLYXIS
+en
+conf t
+ip routing
+vl 11
+name NEXZONE
+vl 22
+name OBSCURON
+vl 33
+name PULSE
+vl 44
+name MNGMT
+exit
+int port 1
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+int fa0/6
+sw mo ac
+sw ac vl 33
+int fa0/7
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+int fa0/2
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+
+
+
+LYX-MSW0
+en
+conf t
+vl 11
+name NEXZONE
+vl 22
+name OBSCURON
+vl 33
+name PULSE
+vl 44
+name MNGMT
+exit
+int port 1
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+int port 2
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+int fa0/2
+sw mo ac
+sw ac vl 11
+int fa0/1
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+do wr
+
+
+
+LYX-SW0
+en
+conf t
+vl 11
+name NEXZONE
+vl 22
+name OBSCURON
+vl 33
+name PULSE
+vl 44
+name MNGMT
+exit
+int port 2
+sw mo tr
+sw tr al vl 11,22,33,44
+int port 1
+sw mo tr
+sw tr al vl 11,22,33,44
+int port 3
+sw mo tr
+sw tr al vl 11,22,33,44
+int fa0/9
+sw mo ac
+sw ac vl 22
+int fa0/10
+sw mo tr
+sw tr al vl 11,22,33,44
+int fa0/8
+sw mo tr
+sw tr al vl 11,22,33,44
+do wr
+
+
+
+
+LYX-MSW1
+en
+conf t
+vl 11
+name NEXZONE
+vl 22
+name OBSCURON
+vl 33
+name PULSE
+vl 44
+name MNGMT
+exit
+int port 1
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+int port 2
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+int port 3
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+int fa0/9
+sw mo ac
+sw ac vl 33
+int fa0/1
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+int fa0/3
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+do wr
+
+
+
+LYX-MSW2
+en
+conf t
+vl 11
+name NEXZONE
+vl 22
+name OBSCURON
+vl 33
+name PULSE
+vl 44
+name MNGMT
+exit
+int port 1
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+int fa0/3
+sw mo ac
+sw ac vl 11
+int fa0/1
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+int fa0/10
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+do wr
+
+
+
+LYX-MSW3
+en
+conf t
+vl 11
+name NEXZONE
+vl 22
+name OBSCURON
+vl 33
+name PULSE
+vl 44
+name MNGMT
+exit
+int port 2
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+int fa0/1
+sw mo ac
+sw ac vl 22
+int fa0/2
+sw mo ac
+sw ac vl 11
+int r fa0/3-4
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+do wr
+
+
+
+
+LYX-MSW4
+en
+conf t
+vl 11
+name NEXZONE
+vl 22
+name OBSCURON
+vl 33
+name PULSE
+vl 44
+name MNGMT
+exit
+int fa0/1
+sw mo ac
+sw ac vl 33
+int fa0/2
+sw mo ac
+sw ac vl 11
+int r fa0/3-5
+sw tr en d
+sw mo tr
+sw tr al vl 11,22,33,44
+do wr
+
+
+
+LYX-SW1
+en
+conf t
+vl 11
+name NEXZONE
+vl 22
+name OBSCURON
+vl 33
+name PULSE
+vl 44
+name MNGMT
+exit
+int port 1
+sw mo tr
+sw tr al vl 11,22,33,44
+int r fa0/4-5
+sw mo tr
+sw tr al vl 11,22,33,44
+do wr
+
+
+
+
+------------------------SUBIECTUL 5----------------------------
+
+
+
+
+LYXiS - SOLARA
+
+NOVA
+POOL NAME: NOVA
+DEFAULT GATEWAY: 101.36.221.254
+DNS SERVER: 101.36.225.131
+START IP ADDRESS: 101.36.220.1
+SUBNET MASK: 255.255.252.0
+MAXIMUM NR OF USERS: 510
+
+FROSTLINE
+POOL NAME: FROSTLINE
+DEFAULT GATEWAY: 101.36.223.254
+DNS SERVER: 101.36.225.131
+START IP ADDRESS: 101.36.223.1
+SUBNET MASK: 255.255.255.0
+MAXIMUM NR OF USERS: 254
+
+ZEPHYRIA
+POOL NAME: ZEPHYRIA
+DEFAULT GATEWAY: 101.36.219.254
+DNS SERVER: 101.36.225.131
+START IP ADDRESS: 101.36.216.1
+SUBNET MASK: 255.255.252.0
+MAXIMUM NR OF USERS: 1022
+
+
+CIPHER
+POOL NAME: CIPHER
+DEFAULT GATEWAY: 101.36.225.158
+DNS SERVER: 101.36.225.131
+START IP ADDRESS: 101.36.225.129
+SUBNET MASK: 255.255.255.224
+MAXIMUM NR OF USERS: 30
+
+RELAY
+
+ArrivedAtSOLARA
+en
+conf t
+int gig0/0/1.2
+ip help 101.36.225.225
+ip help 101.36.222.1
+int gig0/0/1.4
+ip help 101.36.225.225
+ip help 101.36.222.1
+int gig0/0/1.6
+ip help 101.36.225.225
+ip help 101.36.222.1
+int gig0/0/1.8
+ip help 101.36.225.225
+ip help 101.36.222.1
+
+do wr
+
+
+PathToSOLARA
+en
+conf t
+int gig0/0/0
+ip help 101.36.225.222
+ip help 101.36.222.1
+do wr
+
+HEXCoreRouter_1
+en
+conf t
+int se0/1/0
+ip help 101.36.225.186
+ip help 101.36.222.1
+do wr
+
+
+HEXCoreRouter_2
+en
+conf t
+int gig0/0/0
+ip help 101.36.225.229
+ip help 101.36.222.1
+do wr
+
+
+PathToLYXIS
+en
+conf t
+int se0/1/0
+ip help 101.36.225.232
+ip help 101.36.222.1
+do wr
+
+
+ArrivedAtLYXIS
+en
+conf t
+int fa0/1
+ip help 101.36.222.1
+do wr
+
+
+
+
+
+
+OBSIDIA
+
+vlan uri:
+101 STOCK 193.167.5.128/27 - 193.167.5.159/27
+113 CYREX 193.167.5.0/25 - 193.167.5.127/25
+131 MISTIS 193.167.5.160/29 - 193.167.5.167/29
+
+ArrivedAtOBSIDIA
+en
+conf t
+ip dhcp exc 193.167.5.94
+ip dhcp pool CYREX
+network 193.167.5.64 255.255.255.224
+default 193.167.5.94
+ip dhcp exc 193.167.5.63
+ip dhcp pool STOCK
+network 193.167.5.0 255.255.255.192
+default 193.167.5.63
+do wr
+
+
+
+
+------------------------SUBIECTUL 6----------------------------
+
+vl 36 CYREX : 193.167.5.64/27 - 193.167.5.95/27
+vl 63 STOCK: 193.167.5.0/26 - 193.167.5.63/26
+
+OBS-SW0
+ 
+en
+conf t
+no vl 63
+vl 36
+name CYREX
+vl 63
+name STOCK
+exit
+int r gig0/1-2
+speed 10
+int r fa0/1-3
+sw mo tr
+sw tr native vl 99
+duplex full
+speed 100
+do wr
+
+
+OBS-SW1
+en
+conf t
+int r gig0/1-2
+speed 10
+vl 36
+name CYREX
+vl 63
+name STOCK
+exit
+int r fa0/1-2
+duplex half
+int fa0/2
+sw ac vl 63
+int fa0/3
+duplex full
+no sw ac vl 36
+sw mo tr
+sw tr al vl 36,63
+sw tr native vl 99
+int fa0/4
+duplex full
+speed 100
+sw mo tr
+sw tr al vl 36,63
+sw tr native vl 99
+do wr
+
+36OBS-PC0
+->Config->FastEth0->Half Duplex, 10 Mbps
+63OBS-PC0
+->Config->FastEth0->Half Duplex, 10 Mbps, Port Status ON
+
+
+
+OBS-SW3
+en
+conf t
+int r fa0/1-4
+sw tr native vl 99
+int fa0/5
+duplex half
+speed 10
+int r fa0/22-24
+duplex half
+speed 10
+int r gig0/1-2
+speed 10
+do wr
+
+
+OBS-MSW0
+en
+conf t
+int r gig0/1-2
+speed 10
+int r fa0/1-3
+sw
+sw tr en do
+sw mo tr
+sw tr al vl 36,63
+sw tr native vl 99
+duplex full
+speed 100
+do wr
+
+
+
+OBS-MSW1
+en
+conf t
+int r gig0/1-2
+speed 10
+int r fa0/1-3
+sw
+sw tr en do
+sw mo tr
+sw tr al vl 36,63
+sw tr native vl 99
+duplex full
+speed 100
+do wr
+
+
+OBS-MSW2
+en
+conf t
+int r gig0/1-2
+speed 10
+int r fa0/2-3
+sw
+sw tr en do
+sw mo tr
+sw tr al vl 36,63
+sw tr native vl 99
+duplex full
+speed 100
+do wr
+
+
+
+OBS-SW4
+en
+conf t
+int fa0/1
+sw tr native vl 99
+int fa0/2
+sw ac vl 36
+int fa0/3
+sw ac vl 63
+vl 36
+name CYREX
+vl 63
+name STOCK
+exit
+do wr
+
+
+
+63OBS-PC2
+->Config->FastEth0->Port Status ON
+
+
+
+
+
+------------------------SUBIECTUL 7----------------------------
+
+
+
+OBS-SW0
+en
+conf t
+vl 100
+name CLOSEDPORTS
+ip dhcp snooping
+ip dhcp snooping vlan 36,63
+ip arp inspection vl 36,63
+ip arp inspection
+int r fa0/1-3
+ip dhcp snooping trust
+ip arp inspection trust
+sw port
+sw port mac sticky
+sw port max 7
+sw port violation restrict
+sw port aging time 10
+
+int r fa0/4-24
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+int r gig0/1-2
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+
+do wr
+
+
+
+OBS-SW2
+en
+conf t
+vl 100
+name CLOSEDPORTS
+ip dhcp snooping
+ip dhcp snooping vlan 36,63
+ip arp inspection vl 36,63
+int r fa0/3-4
+ip dhcp snooping trust
+ip arp inspection trust
+sw port
+sw port mac sticky
+sw port max 7
+sw port violation restrict
+sw port aging time 10
+
+
+
+int r fa0/1-2
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port violation restrict
+sw port aging time 10
+spann bpdu enable
+spann portfast
+
+
+int r fa0/5-24
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+int r gig0/1-2
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+
+do wr
+
+
+
+
+OBS-SW1
+en
+conf t
+vl 100
+name CLOSEDPORTS
+ip dhcp snooping
+ip dhcp snooping vlan 36,63
+ip arp inspection vl 36,63
+int r fa0/3-4
+ip dhcp snooping trust
+ip arp inspection trust
+sw port
+sw port mac sticky
+sw port max 7
+sw port violation restrict
+sw port aging time 10
+
+
+
+int r fa0/1-2
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port violation restrict
+sw port aging time 10
+spann bpdu enable
+spann portfast
+
+
+int r fa0/5-24
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+int r gig0/1-2
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+
+do wr
+
+
+
+
+OBS-SW3
+en
+conf t
+vl 100
+name CLOSEDPORTS
+ip dhcp snooping
+ip dhcp snooping vlan 36,63
+ip arp inspection vl 36,63
+int r fa0/1-4
+ip dhcp snooping trust
+ip arp inspection trust
+sw port
+sw port mac sticky
+sw port max 7
+sw port violation restrict
+sw port aging time 10
+
+
+
+int fa0/5
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port violation restrict
+sw port aging time 10
+spann bpdu enable
+spann portfast
+
+
+int r fa0/6-24
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+int r gig0/1-2
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+
+do wr
+
+
+
+
+OBS-MSW0
+en
+conf t
+vl 100
+name CLOSEDPORTS
+ip dhcp snooping
+ip dhcp snooping vlan 36,63
+ip arp inspection vl 36,63
+int r fa0/1-3
+ip dhcp snooping trust
+ip arp inspection trust
+sw port
+sw port mac sticky
+sw port max 7
+sw port violation restrict
+sw port aging time 10
+
+
+int r fa0/4-24
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+int r gig0/1-2
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+
+do wr
+
+
+
+OBS-MSW1
+en
+conf t
+vl 100
+name CLOSEDPORTS
+ip dhcp snooping
+ip dhcp snooping vlan 36,63
+ip arp inspection vl 36,63
+int r fa0/1-3
+ip dhcp snooping trust
+ip arp inspection trust
+sw port
+sw port mac sticky
+sw port max 7
+sw port violation restrict
+sw port aging time 10
+
+
+int r fa0/4-24
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+int r gig0/1-2
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+
+do wr
+
+
+OBS-MSW2
+en
+conf t
+vl 100
+name CLOSEDPORTS
+ip dhcp snooping
+ip dhcp snooping vlan 36,63
+ip arp inspection vl 36,63
+int r fa0/1-3
+ip dhcp snooping trust
+ip arp inspection trust
+sw port
+sw port mac sticky
+sw port max 7
+sw port violation restrict
+sw port aging time 10
+
+
+int r fa0/4-24
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+int r gig0/1-2
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+
+do wr
+
+
+
+OBS-SW4
+en
+conf t
+vl 100
+name CLOSEDPORTS
+ip dhcp snooping
+ip dhcp snooping vlan 36,63
+ip arp inspection vl 36,63
+int fa0/1
+ip dhcp snooping trust
+ip arp inspection trust
+sw port
+sw port mac sticky
+sw port max 7
+sw port violation restrict
+sw port aging time 10
+
+
+int r fa0/2-3
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port violation restrict
+sw port aging time 10
+spann bpdu enable
+spann portfast
+
+
+int r fa0/4-24
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+int r gig0/1-2
+ip dhcp snooping limit rate 10
+sw port
+sw port mac sticky
+sw port max 1
+sw port aging time 2
+sw mo ac
+sw ac vl 100
+
+do wr
+
+
+
+
+------------------------SUBIECTUL 8----------------------------
+
+
+
+
+shutdown router -> ctrl+break -> confreg 0x2142 -> reset ->
+en
+copy start run
+conf t
+config 0x2102
+enable secret NeverCATCHme
+
+
+
+------------------------SUBIECTUL 9----------------------------
+
+
+
+ArrivedAtNIXUS
+en
+conf t
+int gig0/0/1.5
+no en d 55
+int gig0/0/1.55
+no en d 5
+int gig0/0/1.5
+en d 5
+ip add 193.167.6.134 255.255.255.248
+int gig0/0/1.55
+en d 55
+ip add 193.167.6.138 255.255.255.252
+int gig0/0/1.21
+en d 21
+int gig0/0/1.47
+ip add 193.167.6.62 255.255.255.192
+int gig0/0/1
+no sh
+
+
+
+NIX-MSW0
+en
+conf t
+int fa0/1
+sw
+sw tr en d
+sw mo tr
+sw tr al vl 5,21,47,55
+sw tr native vl 69
+exit
+no vl 35
+vl 5
+name QUANT
+vl 55
+name CHARON
+no vl 99
+vl 69
+name NATIVEVLAN
+int fa0/2
+sw tr al vl 5,21,47,55
+no sw port
+no sw port mac sticky
+no span port
+no span bpdu en
+speed 100
+duplex full
+channel-g 1 mode pass
+
+int r fa0/3-4
+no sw ac vl 47
+sw mo tr
+sw tr al vl 5,21,47,55
+sw tr native vl 69
+no sw port
+no sw port mac sticky
+no channel-g 15 mode active
+no span port
+no span bpduguard en
+no sh
+speed 100
+duplex full
+int r fa0/5-7
+no sw ac vl 47
+sw tr al vl 5,21,47,55
+sw tr native vl 69
+sw mo tr
+speed 100
+
+
+int po10
+sw tr native vl 69
+sw tr al vl 5,21,47,55
+int po15
+no sw ac vl 47
+sw mo tr
+sw tr native vl 60
+sw tr al vl 5,21,47,55
+
+
+int r fa0/8-9
+sw tr en d
+sw mo tr
+sw tr al vl 5,21,47,55
+sw tr native vl 69
+speed 100
+duplex full
+
+do wr
+
+
+
+
+NIX-SW0
+
+en
+conf t
+no vl 35
+vl 21
+name NBEULIX
+vl 69
+name NATIVEVLAN
+no vl 99
+int po1
+sw tr nat vl 69
+int fa0/1
+no sw ac vl 35
+sw tr nat vl 69
+sw mo tr
+sw tr al vl 5,21,47,55
+duplex full
+speed 100
+
+int fa0/2
+sw tr nat vl 69
+sw mo tr
+sw tr al vl 5,21,47,55
+duplex full
+no span port
+no span bpdu en
+
+int fa0/3
+sw tr nat vl 69
+duplex full
+speed 100
+no span bpdu en
+no span port
+
+int fa0/4
+sw tr nat vl 69
+duplex full
+no span port
+no span bpdu en
+
+
+int r fa0/5-7
+sw ac vl 21
+duplex full
+speed 100
+span port
+span bpdu en
+sw port
+sw port mac stic
+
+int r fa0/8-9
+no sw tr nat vl 99
+
+do wr
+
+
+NIX-PC0,1,2 - > Port Status ON, Full Duplex, 100Mbps
+
+NIX-SW1
+en
+conf t
+no vl 35
+no vl 99
+vl 69
+name NATIVEVLAN
+int po2
+no sw ac vl 47
+sw mo tr
+no sw port
+no sw port mac sticky
+
+
+int fa0/1
+duplex full
+speed 100
+
+int fa0/2
+no sw ac vl 35
+sw mo tr
+sw tr al vl 5,21,47,55
+no channel-g 2 mode active
+no span port
+no span bpdu en
+duplex full
+speed 100
+
+int r fa0/3-4
+no sh
+duplex full
+speed 100
+
+
+int r fa0/5-7
+no sw ac vl 21
+sw mo tr
+duplex full
+speed 100
+
+do wr
+
+
+
+NIX-MSW1
+en
+conf t
+vl 5
+name QUANT
+vl 21
+name NEBULIX
+vl 69
+name NATIVEVLAN
+no vl 99
+vl 100
+named CLOSEDPORTS
+exit
+int r fa0/1-4
+no sw ac vl 35
+sw mo tr
+sw tr al vl 5,21,47,55
+no sw port
+no sw port mac sticky
+duplex full
+speed 100
+no sh
+
+int fa0/5
+sw ac vl 5
+speed 100
+duplex full
+int fa0/6
+speed 100
+duplex full
+int fa0/7
+sw ac vl 55
+no sh
+duplex auto
+speed auto
+span port
+span bpdu en
+do wr
+
+
+NIX-adminPC0,1 -> config -> fastEthernet0 -> Port Status ON, Duplex Full, 100 Mbps
+
+
+
+NIX-SW2
+en
+conf t
+no vl 99
+vl 69
+name NATIVEVLAN
+vl 47
+name THESIA
+vl 55
+name CHARON
+exit
+
+int po5
+sw tr nat vl 69
+
+int fa0/1
+duplex full
+speed 100
+no channel-g mode des
+channel-g mode auto
+
+int fa0/2
+duplex full
+speed 100
+
+int fa0/3
+duplex full
+speed 100
+int fa0/4
+no sw tr al vl 21
+sw mo ac
+sw ac vl 21
+sw port max 3
+duplex full
+speed 100
+
+
+int fa0/8
+no sw ac vl 35
+sw mo tr
+sw tr al vl 5,21,47,55
+no span port
+no span bpdu en
+duplex full
+speed 100
+do wr
+
+
+NIX-AP0
+-> config -> Port0 -> Full Duplex
+-> Port1 -> Port Status ON
+
+21NIX-Smartphone3
+config -> wireless -> SSID NEBULIX
+
+21NIX-Smartphone4
+config -> wireless -> Port Status ON
+
+
+NIX-SW3
+
+en
+conf t
+vl 69
+name NATIVEVLAN
+exit
+int po6
+sw tr nat vl 69
+int r fa0/1-2
+sw tr nat vl 69
+no span bpdu en
+no span port
+int fa0/3
+no sw tr al vl 5,21,47,55
+sw mo ac
+duplex full
+speed 100
+sw port max 3
+int fa0/4
+duplex full
+speed 100
+int fa0/9
+sw tr nat vl 69
+sw tr al vl 5,21,47,55
+duplex full
+speed 100
+int r fa0/5-8
+sh
+sw mo ac
+sw ac vl 100
+int r fa0/10-24
+sh
+sw mo ac
+sw ac vl 100
+int r gig0/1-2
+sh
+sw mo ac
+sw ac vl 100
+do wr
+
+NIX-MSW0(daca v ati dat seama cum sa faceti fara sa calculati felicitari)
+spanning-tree vlan 5,21,47,55 priority 0
+do wr
+
+
+NIX-AP1
+config->Port0-> Full Duplex
+->Port1->THESIA SSID
+
+47NIX-Smartphone3
+config->Wireless-> WPA2-PSK: CantCrackThis
+
+NIX-PC1 gateway: 193.167.6.126
+NIX-PC2 mask: 255.255.255.224
+21NIX-Smartphone4 gateway: 193.167.6.126 mask: 255.255.255.224
+
+
+NIX-Laptop0 IPv4 add: 193.167.6.1
+NIX-Laptop2 IPv4 add: 193.167.6.3
+47NIX-Smartphone5 mask: 255.255.255.192
+
+NIX-adminPC0 gateway: 193.167.6.134, IPv4 add: 193.167.6.129
+NIX-adminPC1 mask: 255.255.255.248
+
+NIX-HomeRouter GUI-> mask: 255.255.255.224, max nr of users: 29
+GUI-> Internet IP Address
+GUI-> Wireless -> 5GHz-1 -> Disabled SSID Broadcast
+
+55NIX-Smartphone0 Port Status ON, SSID: CHARON5GHz, pass: TryAndBreakThisPass-5
+
+55NIX-Tablet1 SSID: CHARON2.4GHz
+
+55NIX-Smartphone1 Port Status ON
+
+
+
+
+------------------------SUBIECTUL 10----------------------------
+
+
+
+
+
+SKY-Router0
+
+en
+conf t
+int gig0/0/0
+standby 96 ip 101.36.225.166
+standby 96 priority 66
+standby 96 preempt
+int gig0/0/1
+standby 99 ip 101.36.225.62
+standby 99 priority 66
+standby 99 track gig0/0/0
+standby 99 preempt
+do wr
+
+
+SKY-Router1
+en
+conf t
+int gig0/0/0
+standby 96 ip 101.36.225.166
+standby 96 priority 63
+standby 96 preempt
+int gig0/0/1
+standby 99 ip 101.36.225.62
+standby 99 priority 63
+standby 99 track gig0/0/0
+standby 99 preempt
+do wr
+
+
+SKY-Router2
+en
+conf t
+int gig0/0/0
+standby 96 ip 101.36.225.166
+standby 96 priority 60
+standby 96 preempt
+int gig0/0/1
+standby 99 ip 101.36.225.62
+standby 99 priority 60
+standby 99 track gig0/0/0
+standby 99 preempt
+do wr
+
+
+
+
+
+------------------------SUBIECTUL 11----------------------------
+
+
+HomeRouter
+Internet IPv4 add 101.36.225.4, mask 255.255.255.192, gateway 101.36.225.62
+
+LAN IPv4 add 101.36.224.1, mask 255.255.255.128
+
+
+Pe toate end devices: Port Status ON, SSID specific + WPA2-PSK specific(AES)
+
+nu prea am ce sa scriu aici guys
+
+
+------------------------SUBIECTUL 12----------------------------
+
+
+ZONA HEX CORE
+
+HEXCoreRouter_1
+en
+conf t
+router ospf 6
+router-id 1.1.1.1
+area 1 stub
+area 0 authentication message-digest
+area 1 authentication message-digest
+int gig0/0/0
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/1
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int se0/1/1
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int se0/1/0
+ip ospf 6 area 1
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+
+HEXCoreRouter_2
+en
+conf t
+router ospf 6
+router-id 2.2.2.1
+area 2 stub
+area 0 authentication message-digest
+area 2 authentication message-digest
+int gig0/0/0
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/1
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int se0/1/1
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int se0/2/1
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+
+int se0/1/0
+ip ospf 6 area 2
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+
+
+HEXCoreRouter_5
+en
+conf t
+router ospf 6
+router-id 5.5.5.1
+area 5 stub
+area 0 authentication message-digest
+area 5 authentication message-digest
+int gig0/0/0
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int se0/2/0
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int se0/1/1
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int se0/2/1
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+
+int se0/1/0
+ip ospf 6 area 5
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+HEXCoreRouter_6
+en
+conf t
+router ospf 6
+router-id 6.6.6.1
+area 6 stub
+area 0 authentication message-digest
+area 6 authentication message-digest
+int gig0/0/0
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/1
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int se0/1/1
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+
+int se0/1/0
+ip ospf 6 area 6
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+HEXCoreRouter_4
+en
+conf t
+router ospf 6
+router-id 4.4.4.1
+area 4 stub
+area 0 authentication message-digest
+area 4 authentication message-digest
+int gig0/0/0
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int se0/2/1
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int se0/2/0
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int se0/1/1
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+
+int se0/1/0
+ip ospf 6 area 4
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+HEXCoreRouter_3
+en
+conf t
+router ospf 6
+router-id 3.3.3.1
+area 3 stub
+area 0 authentication message-digest
+area 3 authentication message-digest
+int gig0/0/0
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int se0/2/1
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int se0/1/1
+ip ospf 6 area 0
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+
+int se0/1/0
+ip ospf 6 area 3
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+solara
+
+PathToSOLARA
+en
+conf t
+router ospf 6
+router-id 1.1.1.2
+area 1 stub
+area 1 authentication message-digest
+int se0/1/0
+ip ospf 6 area 1
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/0
+ip ospf 6 area 1
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+ArrivedAtSOLARA
+en
+conf t
+router ospf 6
+router-id 1.1.1.3
+area 1 stub
+area 1 authentication message-digest
+int gig0/0/1.2
+ip ospf 6 area 1
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/1.4
+ip ospf 6 area 1
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/1.6
+ip ospf 6 area 1
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/1.8
+ip ospf 6 area 1
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+
+int gig0/0/0
+ip ospf 6 area 1
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+
+
+
+
+lyxis
+
+PathToLYXIS
+en
+conf t
+router ospf 6
+router-id 2.2.2.2
+area 2 stub
+area 2 authentication message-digest
+int se0/1/0
+ip ospf 6 area 2
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/0
+ip ospf 6 area 2
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+ArrivedAtLYXIS
+en
+conf t
+router ospf 6
+router-id 2.2.2.3
+area 2 stub
+area 2 authentication message-digest
+int vl 11
+ip ospf 6 area 2
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int vl 22
+ip ospf 6 area 2
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int vl 33
+ip ospf 6 area 2
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int vl 44
+ip ospf 6 area 2
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+
+int fa0/1
+ip ospf 6 area 2
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+obsidia
+
+PathToLOBSIDIA
+en
+conf t
+router ospf 6
+router-id 3.3.3.2
+area 3 stub
+area 3 authentication message-digest
+int se0/1/0
+ip ospf 6 area 3
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/0
+ip ospf 6 area 3
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+ArrivedAtOBSIDIA
+en
+conf t
+router ospf 6
+router-id 3.3.3.3
+area 3 stub
+area 3 authentication message-digest
+int gig0/0/1.36
+ip ospf 6 area 3
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/1.63
+ip ospf 6 area 3
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+
+int gig0/0/0
+ip ospf 6 area 3
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+
+
+NIXUS
+
+PathToNIXUS
+en
+conf t
+router ospf 6
+router-id 4.4.4.2
+area 4 stub
+area 4 authentication message-digest
+int se0/1/0
+ip ospf 6 area 4
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/0
+ip ospf 6 area 4
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+ArrivedAtNIXUS
+en
+conf t
+router ospf 6
+router-id 4.4.4.3
+area 4 stub
+area 4 authentication message-digest
+int gig0/0/1.5
+ip ospf 6 area 4
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/1.21
+ip ospf 6 area 4
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/1.47
+ip ospf 6 area 4
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/1.55
+ip ospf 6 area 4
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+
+
+int gig0/0/0
+ip ospf 6 area 4
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+SKYLON
+
+PathToSKYLON
+en
+conf t
+router ospf 6
+router-id 5.5.5.2
+area 5 stub
+area 5 authentication message-digest
+int se0/1/0
+ip ospf 6 area 5
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/0
+ip ospf 6 area 5
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+ArrivedAtSKYLON
+en
+conf t
+router ospf 6
+router-id 5.5.5.3
+area 5 stub
+area 5 authentication message-digest
+int gig0/0/1
+ip ospf 6 area 5
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/0
+ip ospf 6 area 5
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+SKY-Router0
+en
+conf t
+router ospf 6
+router-id 5.5.5.4
+area 5 stub
+area 5 authentication message-digest
+int gig0/0/1
+ip ospf 6 area 5
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/0
+ip ospf 6 area 5
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+SKY-Router1
+en
+conf t
+router ospf 6
+router-id 5.5.5.5
+area 5 stub
+area 5 authentication message-digest
+int gig0/0/1
+ip ospf 6 area 5
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/0
+ip ospf 6 area 5
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+SKY-Router2
+en
+conf t
+router ospf 6
+router-id 5.5.5.6
+area 5 stub
+area 5 authentication message-digest
+int gig0/0/1
+ip ospf 6 area 5
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/0
+ip ospf 6 area 5
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+PathToDARKWELL
+en
+conf t
+router ospf 6
+router-id 6.6.6.2
+area 6 stub
+area 6 authentication message-digest
+int se0/1/0
+ip ospf 6 area 6
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+int gig0/0/0
+ip ospf 6 area 6
+ip ospf message-digest-key 6 md5 Go4wayV1R3x
+do wr
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------SUBIECTUL 13----------------------------
+
+SOL-NTP-Server2
+
+services -> ntp -> auth enable -> 18 oct, 10:00:00 AM, key: 1, pass: S0l4r4T1m3 -> service ON
+
+
+
+Pe toate routerele HEXCore
+
+en
+conf t
+ntp authentication-key 1 md5 S0l4r4T1m3
+ntp authenticate
+ntp trusted-key 1
+ntp server 101.36.225.130
+do wr
+
+
+
+
+------------------------SUBIECTUL 14----------------------------
+
+
+
+
+LYX-MSW0
+en
+conf t
+int vl 44
+ip add 101.36.225.169 255.255.255.248
+ip domain-name 0withoutLYXIS.local
+crypto key gen rsa
+1024
+ip ssh version 2
+username LYX-MSW0 secret LYXg0tSW4GG
+line vty 0 15
+transport input ssh
+login local
+do wr
+
+LYX-SW0
+en
+conf t
+int vl 44
+ip add 101.36.225.170 255.255.255.248
+ip domain-name 0withoutLYXIS.local
+crypto key gen rsa
+1024
+ip ssh version 2
+username LYX-SW0 secret LYXg0tSW4GG
+line vty 0 15
+transport input ssh
+login local
+do wr
+
+LYX-MSW1
+en
+conf t
+int vl 44
+ip add 101.36.225.171 255.255.255.248
+ip domain-name 0withoutLYXIS.local
+crypto key gen rsa
+1024
+ip ssh version 2
+username LYX-MSW1 secret LYXg0tSW4GG
+line vty 0 15
+transport input ssh
+login local
+do wr
+
+
+
+
+
+------------------------SUBIECTUL 15----------------------------
+
+
+
+
+NAVA VIREX
+
+
+SUBIECTUL 15
+
+
+VIREXCORE_0
+en
+conf t
+ipv6 unicast-routing
+int se0/1/1
+ipv6 add dead:beef:6::0/64
+ipv6 add fe80:: link
+no sh
+int se0/1/0
+ipv6 add dead:beef:66::0/64
+ipv6 add fe80:: link
+no sh
+int gig0/0/1
+ipv6 add c0de:1337:5::0/64
+ipv6 add fe80::0 link
+no sh
+int gig0/0/0
+ipv6 add dead:beef:6666::0/64
+ipv6 add fe80::0 link
+no sh
+do wr
+
+
+
+VIREXCORE_1
+en
+conf t
+ipv6 unicast-routing
+int se0/1/1
+ipv6 add dead:beef:6::1/64
+ipv6 add fe80::1 link
+no sh
+int se0/2/0
+ipv6 add dead:beef:666::0/64
+ipv6 add fe80::0 link
+no sh
+int gig0/0/1
+ipv6 add c0ff:ee:bad2:e24::0/64
+ipv6 add fe80::0 link
+no sh
+int gig0/0/0
+ipv6 add dead:beef:6666::1/64
+ipv6 add fe80::1 link
+no sh
+do wr
+
+
+VIREXCORE_2
+en
+conf t
+ipv6 unicast-routing
+int se0/1/1
+ipv6 add c0ca:c01a:101::0/64
+ipv6 add fe80::0 link
+no sh
+int se0/2/0
+ipv6 add dead:beef:666::1/64
+ipv6 add fe80::1 link
+no sh
+int gig0/0/0
+ipv6 add dead:beef:6666::2/64
+ipv6 add fe80::2 link
+no sh
+int se0/1/0
+ipv6 add dead:beef:66::1/64
+ipv6 add fe80::1 link
+no sh
+do wr
+
+
+Ghinionul0
+en
+conf t
+ipv6 unicast-routing
+int gig0/0/1
+ipv6 add c0ff:ee:bad2:e24::0/64
+ipv6 add fe80::0 link
+no sh
+int gig0/0/0
+ipv6 add dead:beef:6666::3/64
+ipv6 add fe80::3 link
+no sh
+do wr
+
+
+
+Slobocity2.0
+en
+conf t
+ipv6 unicast-routing
+int gig0/0/1
+ipv6 add c0de:1337:5::1/64
+ipv6 add fe80::1 link
+no sh
+int gig0/0/0
+ipv6 add 510b:b4be:221F::0/64
+ipv6 add fe80::0 link
+no sh
+do wr
+
+
+
+SistemulVIREX
+en
+conf t
+ipv6 unicast-routing
+int gig0/0/1
+ipv6 add bad:1dea:ff96::0/64
+ipv6 add fe80::0 link
+no sh
+int gig0/0/0
+ipv6 add c0ff:ee:bad2:e24::1/64
+ipv6 add fe80::1 link
+no sh
+do wr
+
+
+
+
+
+------------------------SUBIECTUL 16----------------------------
+
+
+
+
+
+Slobocity2.0
+en
+conf t
+ipv6 dhcp pool Stateless_IPv6FaraNumar
+domain-name regeee.local
+dns-server 510b:b4be:221F::66
+exit
+int gig0/0/0
+ipv6 dhcp server Stateless_IPv6FaraNumar
+ipv6 nd other
+do wr
+
+
+SistemulVIREX
+en
+conf t
+ipv6 dhcp pool Stateful_IPv6FaraNumar
+add pref bad:1dea:ff96::/64
+dns-server bad:1dea:ff96::66
+domain-name grrPOW.local
+int gig0/0/1
+ipv6 dhcp server Stateful_IPv6FaraNumar
+ipv6 nd managed
+do wr
+
+
+
+------------------------SUBIECTUL 17----------------------------
+
+
+
+
+Ghinionul0
+en
+conf t
+ip route 2.6.2.4 255.255.255.252 2.6.2.2
+int tunnel 0
+ipv6 address 2001:db8:666::1/64
+tunnel source se0/1/0
+tunnel dest 2.6.2.5
+tunnel mode ipv6ip
+do wr
+
+
+Ghinionul1
+en
+conf t
+ip route 2.6.2.0 255.255.255.252 2.6.2.6
+int tunnel 0
+ipv6 address 2001:db8:666::2/64
+tunnel source se0/1/1
+tunnel dest 2.6.2.1
+tunnel mode ipv6ip
+do wr
+
+
+
+------------------------SUBIECTUL 18----------------------------
+
+
+
+VIREXCORE_0
+en
+conf t
+ipv6 router ospf 2
+router-id 100.0.0.0
+int se0/1/0
+ipv6 ospf 2 area 0
+ipv6 ospf netw point
+int se0/1/1
+ipv6 ospf 2 area 0
+ipv6 ospf netw point
+int gig0/0/0
+ipv6 ospf 2 area 0
+int gig0/0/1
+ipv6 ospf 2 area 0
+do wr
+
+VIREXCORE_1
+en
+conf t
+ipv6 router ospf 2
+router-id 101.0.0.0
+int se0/1/1
+ipv6 ospf 2 area 0
+ipv6 ospf netw point
+int se0/2/0
+ipv6 ospf 2 area 0
+ipv6 ospf netw point
+int gig0/0/0
+ipv6 ospf 2 area 0
+int gig0/0/1
+ipv6 ospf 2 area 0
+do wr
+
+
+VIREXCORE_2
+en
+conf t
+ipv6 route ::/0 c0ca:c01a:101::1
+ipv6 router ospf 2
+router-id 102.0.0.0
+default orig
+int se0/1/1
+ipv6 ospf 2 area 0
+ipv6 ospf netw point
+int se0/2/0
+ipv6 ospf 2 area 0
+ipv6 ospf netw point
+int se0/1/0
+ipv6 ospf 2 area 0
+ipv6 ospf netw point
+int gig0/0/0
+ipv6 ospf 2 area 0
+do wr
+
+
+
+
+
+
+Slobocity2.0
+en
+conf t
+ipv6 router ospf 2
+router-id 100.0.0.1
+int gig0/0/0
+ipv6 ospf 2 area 0
+int gig0/0/1
+ipv6 ospf 2 area 0
+do wr
+
+
+SistemulVIREX
+en
+conf t
+ipv6 router ospf 2
+router-id 101.0.0.1
+int gig0/0/0
+ipv6 ospf 2 area 0
+int gig0/0/1
+ipv6 ospf 2 area 0
+do wr
+
+Ghinionul0
+en
+conf t
+ipv6 router ospf 2
+router-id 103.0.0.0
+int gig0/0/0
+ipv6 ospf 2 area 0
+int gig0/0/1
+ipv6 ospf 2 area 0
+int tunnel0
+ipv6 ospf netw point
+ipv6 ospf 2 area 0
+do wr
+
+Ghinionul2
+en
+conf t
+ipv6 router ospf 26
+router-id 103.0.0.1
+int gig0/0/0
+ipv6 ospf 2 area 0
+int tunnel0
+ipv6 ospf netw point
+ipv6 ospf 2 area 0
+do wr
+
+
+
+
+
+------------------------SUBIECTUL 19----------------------------
+
+
+
+
+
+traversati tot clusterul folosindu va ori de ssh: ssh -l <hostname> <ip> ori telnet: telnet <ip>
+iar pt a descoperi echipamentele din apropiere: sh cdp neighbours si sh cdp neighbours detail
+
+
+DARK-Router7
+en
+conf t
+int gig0/0/0
+ip ospf priority 255
+do wr
+
+
+DARK-Router5
+en
+conf t
+no ip route 0.0.0.0 0.0.0.0 69.69.69.8
+router ospf 6
+no default orig
+do wr
+
+
+StopBeingSoNaive
+en
+conf t
+int fa0/4
+sh
+do wr

@@ -1,0 +1,52 @@
+VIREX
+
+MYSTERION
+
+Necazul 0 - Necazul 1 - LACP - gr 6
+Necazul 0 - Necazul 3 - LACP - gr 9
+Necazul 1 - Necazul 2 - PaGP - gr 9
+Necazul 2 - Necazul 3 - PaGP - gr 6
+
+
+Necazul 0
+en
+conf t
+int r fa0/2-3
+channel-group 6 mode active
+int r fa0/4-5
+channel-group 9 mode active
+
+
+Necazul 1
+en
+conf t
+int r fa0/2-3
+channel-group 6 mode active
+int r fa0/4-5
+channel-group 9 mode des
+
+Necazul 2
+en
+conf t
+int r fa0/2-3
+channel-group 9 mode des
+int r fa0/4-5
+channel-group 6 mode des
+
+
+
+
+Necazul 3
+en
+conf t
+int r fa0/2-3
+channel-group 6 mode des
+int r fa0/4-5
+channel-group 9 mode active
+
+
+
+HAI LA JOB(pe langa ip and ospf)
+pe ghinionul 0 & 2
+int gig0/0/1
+ipv6 add fe80::0 link
